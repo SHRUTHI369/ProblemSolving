@@ -1,0 +1,6 @@
+To rotate the given array by k steps:
+Let array=[1,2,3,4,5,6,7,8,9] k=3
+Rotate the array by 3 steps ie. array=[7,8,9,1,2,3,4,5,6]
+Step 1: reverse the array from 0 to sizeofarray-k-1 ie.array=[6,5,4,3,2,1,7,8,9]
+Step 2: reverse the array from sizeofarray-k to sizeofarray-1 ie.array=[6,5,4,3,2,1,9,8,7]
+Step 3: reverse the array from 0 to sizeofarray-1 ie.array=[7,8,9,1,2,3,4,5,6]
