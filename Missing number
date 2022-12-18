@@ -1,0 +1,9 @@
+Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
+Approach 1:
+First sort the array
+If the ith index element is not equal to the index i then return the index ((a[i]!=i) return i)
+Else return the size of array(This is because if the last range value is missing then it it returns the size of array)
+
+Approach 2:
+XOR every resultant value with each ith element with its respective index value(res=res^a[i]^i)
+Then return the XOR value of resultant with size of array.(res^n)
