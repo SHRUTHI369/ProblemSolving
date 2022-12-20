@@ -1,0 +1,4 @@
+Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+First to check the elements in an array is non-zero element
+If it is non-zero then swap it with zero element with the relative order of non-zero elements,then the zeros are moved to the end of an array.
+Eg: a[]=[0,10,3,13,0,2,0]  here,3 should always after be 10 and 2 should always be afer 13.
