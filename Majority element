@@ -1,0 +1,19 @@
+Given an array nums of size n, return the majority element.
+
+The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
+This approach is used to count more vote
+int majorityElement(int* a, int n){
+   int voter=a[0];
+   int vc=1;
+   for(int i=1;i<n;i++){
+       if(voter==a[i]) ++vc;
+       else --vc;
+       if(vc==0){
+           voter=a[i];
+           vc=1;
+       }
+       
+   }
+   if(vc!=0) return voter;
+     return 0;
+}
