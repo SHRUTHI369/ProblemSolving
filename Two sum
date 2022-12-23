@@ -1,0 +1,11 @@
+Description:
+Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+Approach-1:Brute Force Algorithm 
+Run two loops and check for every combination in the given array.
+Fix the outer loop at a specific index and move the inner loop to get all the possible pairs. The outer loop runs from i=0 to i=n-2 and inner loop runs from j=i+1 to j=n-1.
+In each iteration of the inner loop check if the numbers represented by the outer and inner loop indexes add up to the target sum.
+If nums[outerLoopIndex] + nums[innerLoopIndex] is equal to target, return {outerLoopIndex, innerLoopIndex}  as result. Else continue iteration to check for the next pair.
+Repeat the above steps until you find a combination that adds up to the given target.
+Time Complexity:O(n^2) Space Complexity:O(1).
