@@ -1,0 +1,24 @@
+Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.
+
+First Approach - Brute approach
+1.First traverse the array from start to end
+   For every element,
+      Traverse array from start to that index and find maximum of left of that index
+      Traverse array from that index to end and find maximum of right of that index.
+2.Find the minimum(Left,Right)-heigth of current index that is the amount of water stored in that particular index.
+3.Add the total amount of water stored in every index.
+Time complexity of this approach is O(n^2) and Space complexity is O(1) where, Time limit exceeds.
+
+
+Second Approach - Precalculation
+Create two arrays left[] and right[] of size N. Create a variable to store the maximum found till a certain index during traversal.
+Run one loop from start to end: 
+In each iteration update max and also assign left[i] = max.
+Run another loop from end to start: 
+In each iteration update max found till now and also assign right[i] = max.
+Traverse the array from start to end.
+The amount of water that will be stored in this column is min(left[i], right[i]) – array[i]
+Add this value to the total amount of water stored and resturn the result.
+Time and Space Complexity of this approach is O(N).Since we use extra array for this approach Space complexity is O(N).
+
+
