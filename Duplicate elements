@@ -1,0 +1,5 @@
+Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+
+First sort the array.
+Then compare the array element with its previous element.
+If it is equal then return true else return false.
